@@ -4,7 +4,7 @@ Spree::Order.class_eval do
 
   def pay_what_you_want_price=(price)
     @pay_what_you_want_price = price rescue nil
-    
+
 #    self.adjustments.create({ :amount => (-1 * price.to_i),
 #			  :source => "Pay What You Want",
 #                          :originator => self,
