@@ -1,21 +1,9 @@
-SpreePayWhatYouWant
+Spree Pay What You Want
 ===================
 
-Introduction goes here.
+Warning: This is a work in progress and is not done yet.
 
+The goal with this extension is to allow the customer to choose their
+own price.
 
-Example
-=======
-
-Example goes here.
-
-Testing
--------
-
-Be sure to bundle your dependencies and then create a dummy test app for the specs to run against.
-
-    $ bundle
-    $ bundle exec rake test_app
-    $ bundle exec rspec spec
-
-Copyright (c) 2013 [name of extension creator], released under the New BSD License
+Copyright (c) 2013 Andrew Orr and Ben Bergman, released under the New BSD License
