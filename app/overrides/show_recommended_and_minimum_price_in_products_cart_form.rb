@@ -6,4 +6,4 @@ Deface::Override.new(:virtual_path => "spree/products/_cart_form",
                                  <h6 class="product-section-title"><%= t(:minimum_price) %></h6>
                                  <div><span class="price selling" itemprop="price"><%= number_to_currency(@product.minimum_price) %></span></div>
                                </div>',
-                     :name => "show_recommended_and_minimum_price")
+                     :name => "show_recommended_and_minimum_price_in_products_cart_form")
