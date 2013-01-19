@@ -1,3 +1,4 @@
+# Shows up on product page
 Deface::Override.new(:virtual_path => "spree/products/_cart_form",
                      :replace => "#product-price",
                      :text => '<div id="product-price">
