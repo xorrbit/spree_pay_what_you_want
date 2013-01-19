@@ -1,0 +1,68 @@
+/*
+ *= require store/spree_core
+ */
+
+@import "./variables.css.scss"; // Must call explicit path or else extension integration tests cannot import file.
+
+  span.price {
+    font-weight: bold;
+    color: $link_text_color;
+
+    &.selling {
+      font-size: $product_detail_price_font_size;
+    }
+    &.diff {
+      font-weight: bold;
+    }  
+  }
+
+
+  /*--------------------------------------*/
+  /* Cart
+  /*--------------------------------------*/
+  table#cart-detail {
+    tbody#line_items {
+      tr {
+
+        td[data-hook="cart_item_minimum_price"], 
+        td[data-hook="cart_item_recommended_price"] {
+          @extend span.price;
+          @extend span.price.selling;
+        }
+      }
+    }
+  }
+
+
+/* #Media Queries
+================================================== */
+
+  /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+
+    table#cart-detail, table[data-hook="order_details"] {
+      tbody {
+        tr {
+          td[data-hook="cart_item_minimum_price"], 
+          td[data-hook="cart_item_recommended_price"] {
+            font-size: $base_font_size !important; 
+          }
+        }
+      }  
+    }
+  }
+
+  /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+  @media only screen and (max-width: 479px) {
+    
+    table#cart-detail, table[data-hook="order_details"] {
+      tbody {
+        tr {
+          td[data-hook="cart_item_minimum_price"], 
+          td[data-hook="cart_item_recommended_price"] {
+            font-size: $base_font_size + 2 !important; 
+          }
+        }
+      }  
+    }
+  }

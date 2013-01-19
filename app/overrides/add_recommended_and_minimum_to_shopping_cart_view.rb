@@ -9,10 +9,10 @@ Deface::Override.new(:virtual_path => "spree/orders/_line_item",
                      :insert_before => "[data-hook='cart_item_price']",
                      # Classes were set to cart-item-price to share CSS formatting
                      # TODO: create proper class and update CSS
-                     :text => '<td class="cart-item-price" data-hook="cart_item_price">
+                     :text => '<td class="cart-item-minimum-price" data-hook="cart_item_minimum_price">
                                  <%= Spree::Money.new(line_item.minimum_price, { :currency => line_item.currency }) %>
                                </td>
-                               <td class="cart-item-price" data-hook="cart_item_price">
+                               <td class="cart-item-recommended-price" data-hook="cart_item_recommended_price">
                                  <%= Spree::Money.new(line_item.recommended_price, { :currency => line_item.currency }) %>
                                </td>',
                      :name => "add_recommended_and_minimum_to_shopping_cart_view_lines")
