@@ -1,7 +1,11 @@
 Spree::Order.class_eval do
+  def find_line_item_by_variant_and_price(variant, price)
+    line_items.detect { |line_item| line_item.variant_id == variant.id && line_item.price == price }
+  end
+
   def add_variant(variant, price, quantity = 1, currency = nil)
-    current_item = find_line_item_by_variant(variant)
-    if current_item
+    current_item = find_line_item_by_variant_and_price(variant, price)
+    if current_item && current_item.price == price
       current_item.quantity += quantity
       current_item.currency = currency unless currency.nil?
       current_item.save
