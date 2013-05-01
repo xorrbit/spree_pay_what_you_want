@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_pay_what_you_want'
-  s.version     = '1.3.2'
+  s.version     = '1.3.2.1'
   s.summary     = 'Spree extension to let the customer choose the price.'
   s.description = 'Spree extension to let the customer choose the price.'
   s.required_ruby_version = '>= 1.8.7'
